@@ -20,72 +20,17 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td style="color: #00aced;"><a type="button" data-toggle="modal" data-target="#modal-details">Merchant A</a></td>
-							<td>100</td>
-							<td>Rp. 1.000.000</td>
-							<td>Rp. 200.000</td>
-						</tr>
-						<tr>
-							<td style="color: #00aced;">Merchant B</td>
-							<td>200</td>
-							<td>Rp. 2.000.000</td>
-							<td>Rp. 200.000</td>
-						</tr>
-						<tr>
-							<td style="color: #00aced;">Merchant C</td>
-							<td>300</td>
-							<td>Rp. 3.000.000</td>
-							<td>Rp. 300.000</td>
-						</tr>
-						<tr>
-							<td style="color: #00aced;">Merchant C</td>
-							<td>300</td>
-							<td>Rp. 3.000.000</td>
-							<td>Rp. 300.000</td>
-						</tr>
-						<tr>
-							<td style="color: #00aced;">Merchant C</td>
-							<td>300</td>
-							<td>Rp. 3.000.000</td>
-							<td>Rp. 300.000</td>
-						</tr>
-						<tr>
-							<td style="color: #00aced;">Merchant C</td>
-							<td>300</td>
-							<td>Rp. 3.000.000</td>
-							<td>Rp. 300.000</td>
-						</tr>
-						<tr>
-							<td style="color: #00aced;">Merchant C</td>
-							<td>300</td>
-							<td>Rp. 3.000.000</td>
-							<td>Rp. 300.000</td>
-						</tr>
-						<tr>
-							<td style="color: #00aced;">Merchant C</td>
-							<td>300</td>
-							<td>Rp. 3.000.000</td>
-							<td>Rp. 300.000</td>
-						</tr>
-						<tr>
-							<td style="color: #00aced;">Merchant C</td>
-							<td>300</td>
-							<td>Rp. 3.000.000</td>
-							<td>Rp. 300.000</td>
-						</tr>
-						<tr>
-							<td style="color: #00aced;">Merchant C</td>
-							<td>300</td>
-							<td>Rp. 3.000.000</td>
-							<td>Rp. 300.000</td>
-						</tr>
-						<tr>
-							<td style="color: #00aced;">Merchant C</td>
-							<td>300</td>
-							<td>Rp. 3.000.000</td>
-							<td>Rp. 300.000</td>
-						</tr>
+						<?php
+						foreach ($transactions as $trx) {
+						?>
+							<tr>
+								<td style="color: #00aced;"><a type="button" data-toggle="modal" data-target="#modal-details"><?= $trx->distributor_name ?></a></td>
+								<td style="color: #000000;"><?= $trx->total_selling_merchants ?></td>
+								<td style="color: #000000;"><?= formatRupiah($trx->total_sales_idr)  ?></td>
+								<td style="color: #000000;"><?= formatRupiah($trx->total_incentive_idr)  ?></td>
+							</tr>
+						<?php
+						} ?>
 					</tbody>
 				</table>
 				<ul class="pagination m-0">

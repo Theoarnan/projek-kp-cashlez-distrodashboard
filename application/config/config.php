@@ -526,4 +526,4 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 // Konfigurasi API Base URL
-$config["api_url"] = "http://localhost/ws_property_fix/api/v1/";
+$config["api_url"] = "http://localhost/WebService/wsKereta/api/v1/";

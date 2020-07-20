@@ -15,8 +15,8 @@
 						<img src="<?= base_url(); ?>assets/images/logos/shop.png" alt="Logo Merchant" width="35px" height="45px">
 					</div>&nbsp;&nbsp;
 					<div class="flex">
-						<div class="text-amount"> Total Selling Merchant</div>
-						<div class="mt-1"><b> 20</b></div>
+						<div class="text-amount">Total Selling Merchant</div>
+						<div class="mt-1"><b><?php echo $sellingMerchants ?></b></div>
 					</div>
 				</div>
 			</div>
@@ -27,7 +27,7 @@
 					</div>&nbsp;&nbsp;
 					<div class="flex">
 						<div class="text-amount">Total Sales Number</div>
-						<div class="mt-1"><b>1000</b></div>
+						<div class="mt-1"><b><?php echo $totalNumbers ?></b></div>
 					</div>
 				</div>
 			</div>
@@ -38,7 +38,7 @@
 					</div>&nbsp;&nbsp;
 					<div class="flex">
 						<div class="text-amount">Total Sales Amount</div>
-						<div class="mt-1"><b>Rp.8.000.000</b></div>
+						<div class="mt-1"><b><?php echo formatRupiah($salesAmounts) ?></b></div>
 					</div>
 				</div>
 			</div>
@@ -49,7 +49,7 @@
 					</div>&nbsp;&nbsp;
 					<div class="flex">
 						<div class="text-amount">Total Incentive</div>
-						<div class="mt-1"><b>Rp.1.600.000</b></div>
+						<div class="mt-1"><b><?php echo formatRupiah($totalIncentives) ?></b></div>
 					</div>
 				</div>
 			</div>

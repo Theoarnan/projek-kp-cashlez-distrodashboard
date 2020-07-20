@@ -54,5 +54,13 @@ function ifNull($data, $return) {
 }
 
 function formatRupiah($angka){
-	return "Rp.".number_format($angka, 2,",",".").",-";
+	return "Rp.".number_format($angka, 0,",",".");
+}
+
+function cekLogin()
+{
+	$CI = &get_instance();
+	if(!$CI->session->userdata('token')){
+		redirect('login');
+	}	
 }

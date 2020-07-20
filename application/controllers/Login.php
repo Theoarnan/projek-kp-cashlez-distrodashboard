@@ -16,12 +16,18 @@ class Login extends CI_Controller
         if ($kode == 200) {
             $dataUser = $result["body"];
             $dataSession = array(
-                "token" => $dataUser->token,
+                "token" => $dataUser->token
             );
             $this->session->set_userdata($dataSession);
             echo "1";
         } else {
             echo "Username dan Password Tidak ditemukan!";
         }
+    }
+
+    public function logout()
+    {
+        $this->session->sess_destroy();
+        redirect('login');
     }
 }

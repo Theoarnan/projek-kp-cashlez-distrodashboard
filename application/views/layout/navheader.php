@@ -16,7 +16,7 @@
 						<a href="#account_menu" class="btn btn-rounded btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false"> Theoarnan <span class="caret"></span></a>
 						<div id="account_menu" class="dropdown-menu dropdown-menu-right">
 							<a class="dropdown-item" href="#">Account</a>
-							<a class="dropdown-item" href="<?= site_url('Login')?>">Logout</a>
+							<a class="dropdown-item" href="<?= site_url('login/logout')?>">Logout</a>
 						</div>
 					</li>
 				</ul>
